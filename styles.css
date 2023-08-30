@@ -1,0 +1,85 @@
+body {
+  background-color: #92d400;
+  background-image: linear-gradient(43deg, #92d400 13%, #000000 53%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #fff;
+  max-width: 400px;
+  width: 100%;
+  max-height: 250px;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.reload-btn {
+  position: absolute;
+  right: 4%;
+  top: 22%;
+  padding: 0;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  background: #000000;
+  outline-color: #92d400;
+}
+
+.reload-icon-btn {
+  color: #92d400;
+  padding: 8px;
+}
+
+.card__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+  width: 70%;
+}
+
+.card__captcha {
+  border: 1px solid #000000;
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 45%;
+  margin: 0;
+}
+
+.card__captcha-placeholder {
+  border: 1px solid #000000;
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 20%;
+  margin: 0;
+  display: block;
+  margin: 5% 0 5% 0;
+  outline-color: #92d400;
+}
+
+.verify-btn {
+  position: absolute;
+  outline-color: #92d400;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #000000;
+  color: #fff;
+  height: 20%;
+  width: 35%;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
