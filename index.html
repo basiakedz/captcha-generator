@@ -6,16 +6,17 @@
     <title>Captcha Generator App</title>
     <link href="styles.css" rel="stylesheet" type="text/css" />
     <link href="normalize.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/18d1dd2a40.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <main class="card">
+      <button class="reload-btn">
+        <i class="fa-solid fa-rotate-right reload-icon-btn"></i>
+      </button>
       <article class="card__content">
-        <div>
-          <p class="card__captcha"></p>
-          <button class="reload-btn"></button>
-        </div>
-        <p class="card__captcha-placeholder"></p>
-        <button class="verify-btn"></button>
+        <p class="card__captcha"></p>
+        <input class="card__captcha-placeholder" placeholder="Type the text above"></input>
+        <button class="verify-btn">Verify</button>
       </article>
     </main>
   </body>
