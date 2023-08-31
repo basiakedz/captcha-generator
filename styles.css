@@ -31,6 +31,7 @@ body {
   border-radius: 8px;
   background: #000000;
   outline-color: #92d400;
+  cursor: pointer;
 }
 
 .reload-icon-btn {
@@ -47,16 +48,24 @@ body {
   width: 70%;
 }
 
-.card__captcha {
+.card__captcha-text {
   border: 1px solid #000000;
   border-radius: 8px;
   box-sizing: border-box;
+  outline-color: #92d400;
   width: 100%;
   height: 45%;
   margin: 0;
+  font-size: 3rem;
+  letter-spacing: -0.4rem;
+  font-style: italic;
+  color: #fff;
+  text-shadow: 2px 4px 4px;
+  -webkit-text-stroke: 2px black;
+  text-align: center;
 }
 
-.card__captcha-placeholder {
+.card__captcha-input {
   border: 1px solid #000000;
   border-radius: 8px;
   box-sizing: border-box;
@@ -82,4 +91,5 @@ body {
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
