@@ -1,6 +1,6 @@
 # Captcha Generator App ![Green Robot](/images/favicon-32x32.png)
 
-This is a simple web application that generates and verifies captchas using vanilla JavaScript.
+This is a simple web application based on my own design that generates and verifies captchas using vanilla JavaScript.
 
 ### Overview
 
