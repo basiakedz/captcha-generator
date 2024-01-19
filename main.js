@@ -1,7 +1,25 @@
 const reloadButton = document.querySelector(".reload-btn");
-const captchaText = document.querySelector(".card__captcha-text");
 const captchaInput = document.querySelector(".card__captcha-input");
 const verifyButton = document.querySelector(".verify-btn");
+const captchaHandler = {
+  element: document.querySelector('.card__captcha-canvas'),
+  stringCode: '',
+  set code(captchaCode) {
+    const context = this.element.getContext('2d');
+    context.clearRect(0, 0, this.element.width, this.element.height);
+    this.stringCode = captchaCode;
+
+    context.font = 'italic bold 48px Times';
+    context.lineWidth = 2;
+    const captchaCodeMetrics = context.measureText(captchaCode);
+
+    context.strokeText(
+        captchaCode,
+        (this.element.width - captchaCodeMetrics.width) / 2,
+        (this.element.height + 30) / 2
+    );
+  }
+};
 
 const randomChar = () => {
   const lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
@@ -27,11 +45,11 @@ const generateRandomString = (length) => {
 
 const stringLength = 8;
 const randomString = generateRandomString(stringLength);
-captchaText.value = randomString;
+captchaHandler.code = randomString;
 
 reloadButton.addEventListener("click", () => {
   const newRandomString = generateRandomString(stringLength);
-  captchaText.value = newRandomString;
+  captchaHandler.code = newRandomString;
   captchaInput.value = "";
   verifyButton.style.opacity = "0.5";
 });
@@ -55,7 +73,7 @@ captchaInput.addEventListener("keyup", (event) => {
 
 function verifyCaptcha() {
   const captchaInputValue = captchaInput.value;
-  const captchaTextValue = captchaText.value;
+  const captchaTextValue = captchaHandler.stringCode;
 
   if (captchaInputValue === captchaTextValue) {
     alert("Entered captcha is correct");
