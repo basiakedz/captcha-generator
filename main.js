@@ -25,12 +25,12 @@ const generateRandomString = (length) => {
   return randomString;
 };
 
-const stringLengh = 8;
-const randomString = generateRandomString(stringLengh);
+const stringLength = 8;
+const randomString = generateRandomString(stringLength);
 captchaText.value = randomString;
 
 reloadButton.addEventListener("click", () => {
-  const newRandomString = generateRandomString(stringLengh);
+  const newRandomString = generateRandomString(stringLength);
   captchaText.value = newRandomString;
   captchaInput.value = "";
   verifyButton.style.opacity = "0.5";
